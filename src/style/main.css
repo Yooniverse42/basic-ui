@@ -19,9 +19,20 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: yellow;
+  background-color: darkblue;
   height: 10vh;
   padding: 0 50px;
+  border-radius: 0 0 15px 15px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+/* 로고 */
+.logo {
+  background: orange;
+  position: absolute;
+  top: 45px;
+  left: 60px;
 }
 
 /* 비주얼 */
