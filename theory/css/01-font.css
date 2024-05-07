@@ -1,0 +1,61 @@
+/* 단위 */
+/* 절대단위 - px */
+/* 상대단위 - em(엠단위-부모로부터 상속), */
+/* 상대단위 - rem(렘단위-html 요소를 기준으로 계산) */
+/* 상대단위 - vw(뷰포트를 기준으로 계산) */
+/* 상대단위 - cqw(container query width) */
+
+html {
+  font-size: 0.625em;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  /* font-family: 'Courier New', Courier, monospace;
+  line-height: 1;
+  font-size: 60px;
+  font-weight: 100;
+  font-style: italic;
+  font-variant: small-caps; */
+  font : bold italic small-caps 60px /1 'Courier New'
+}
+/* bold italic small-caps : 순서 상관없음 하지만 1순위로 적어줘야함 */
+/* 60px /1 : 2순위임. Line height적을 땐 앞에 슬래쉬 넣어줘야함 */
+/* font-family는 항상 마지막에 적어야함. */
+
+
+/* 상속받은 크기 16px * 2 = 32px */
+.div1 {
+  font-size: 2em;
+}
+
+/* 상속받은 크기 32px * 1.5 = 48px */
+/* em = 상속된 글자 크기의 비례 */
+.p1 {
+  font-size: 1.5em;
+  line-height: 1; /* css에서는 0 제외하고 단위 생략 안됨.  */
+}
+/* line-height에서 "1 = 자신의 현재 폰트 크기"임. */
+/* 그래서 현재 폰트 크기인 px 단위로 적어줘도 되지만 폰트 크기 바뀌면 다 바꿔야 하니까 1, 1.15 ... 이런 숫자로 정해주자  */
+
+/* 상속받은 크기 16px * 2 = 32px */
+.div2 {
+  font-size: 2em;
+}
+
+/* 상속받은 크기 32px * 1.5 = 48px */
+/* em = 상속된 글자 크기의 비례 */
+.p2 {
+  font-size: 1.5rem;
+  line-height: 1; /* css에서는 0 제외하고 단위 생략 안됨.  */
+}
+
+/* viewport 크기 */
+@media (max-width: 767px) {
+  p {
+    font-size: 3vw;
+  }
+}
