@@ -48,12 +48,17 @@ body {
 @keyframes moveEffect{
   0%{
     font-size: 12px;
-    margin: 0;
+    translate: 0 0;
   }
   100%{
     font-size: 24px;
-    margin: 75px 0 0 400px;
+    translate: 320px 75px;
   }
+}
+
+@keyframes fadeEffect {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
 }
 
 .visual-text {
@@ -61,7 +66,9 @@ body {
   animation-name: moveEffect;
   animation-duration: 5000ms;
   animation-fill-mode: forwards;
-  background-color: lime;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
 }
 
 .visual {
@@ -80,6 +87,12 @@ body {
     top: 0;
     left: 0;
     background-repeat: no-repeat;
+
+    animation-name: fadeEffect;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
   }
 
 }
@@ -93,6 +106,7 @@ body {
 .visual::after {
   background-image: url(/images/ani_flower_03.png), url(/images/ani_flower_04.png);
   background-position: 300px 0, 800px 30px;
+  animation-delay: 2000ms;
 }
 
 
