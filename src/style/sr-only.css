@@ -1,0 +1,17 @@
+.sr-only {
+  background: red;
+  position: absolute; /* 영역을 차지않고 레이어로 겹쳐있게 되서ㄴ 필요함 */
+  width: 1px;
+  height: 1px;
+  inline-size: 1px; /* width를 지원하는 브라우저는 width를, 지원하지 않는 브라우저는 inline-size를 읽을 것임. 그래서 같이 적어줘도 됨. */
+  block-size: 1px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  clip-path: polygon(0 0 , 0 0, 0 0); /* clip을 지원하는 브라우저 clip-path 지원하는 브라우저 다르니까 같이 적어놓은거임. 사실상 같은거임 */
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+  font-size: 0;
+
+}
