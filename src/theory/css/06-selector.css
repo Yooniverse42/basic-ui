@@ -1,0 +1,41 @@
+/* 전체 선택자 */
+* {
+  color: black;
+}
+
+/* 요소 선택자 */
+body {
+  color: black;
+}
+
+/* class 선택자 */
+.box {
+  border :  1px solid red
+}
+
+/* id 선택자 */
+#selector {
+  color: black;
+}
+
+/* 속성 선택자 */
+[title] {
+  color: black;
+}
+
+/* 가상 선택자 */
+.box::before {
+  content: "첫 번째 자식요소";
+  background-color: lime;
+  width: 120px;
+  inline-size: 120px;
+  display: block;
+}
+
+.box::after {
+  content: "마지막 자식 요소";
+  background-color: skyblue;
+  width: 120px;
+  inline-size: 120px;
+  display: block;
+}
