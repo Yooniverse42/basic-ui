@@ -1,0 +1,37 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* 로그인 */
+.login {
+  --box-start-color: var(--orange-100);
+  --box-end-color: var(--orange-200);
+  --box-shadow-color: var(--gray-700);
+
+  background-image: radial-gradient(circle at right top, var(--box-start-color), var(--box-end-color));
+  border-radius: 5px;
+  padding: 10px;
+  /* x축 y축 blur boxshadow(border느낌) */
+  box-shadow: 5px 5px 0 0 var(--box-shadow-color);
+
+  .login-title {
+    --color: var(--yellow);
+
+    color: var(--color);
+    margin: 0;
+    /* 15 / 16 = 0.9375 */
+    font-size: 0.9375rem;
+  }
+}
+
+.login-form {
+  background-color: #fff;
+}
+
+.member-sign {
+  background-color: #fff;
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+}
