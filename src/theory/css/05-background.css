@@ -27,5 +27,5 @@
   background-repeat: no-repeat;
   background-position: 0 0, 200px 100px; */
   background: url(../../images/ani_flower_01.png) no-repeat 0 0,
-              url(/images/ani_flower_02.png) no-repeat 200px 100px, yellow;
+             url(/images/ani_flower_02.png) no-repeat 200px 100px, yellow;
 }
