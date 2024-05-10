@@ -17,8 +17,39 @@ body {
     float: left;
     /* 클릭할 수 없도록 버튼에 보더를 주는 것이 아닌 li에 줘야함 */
     border-left: 2px solid #fff;
+    position: relative;
   }
 
+  > li:nth-child(-n+3) ul {
+    left: 0;
+  }
+
+  > li:nth-child(n+4) ul {
+    right: 0;
+  }
+
+  .is--active {
+    button {
+      color: yellow;
+
+      &::after {
+        content: "";
+        background: #000;
+        display: block;
+        height: 1px;
+      }
+    }
+
+    /* span {
+      border-bottom: 2px solid black;
+    } */
+
+    ul {
+      display: block;
+    }
+  }
+
+  
   button {
     font-size: 1.5rem;
     font-weight: 700;
@@ -33,9 +64,41 @@ body {
     text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
     /* 윤곽처럼 보이게 하고 싶을 땐 -1px 적용 */
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+    
+    span{
+      display: block;
+    }
   }
 
-  ul {
+  /* button[aria-expanded="true"]{
+    color: lime;
+  } */
+
+  ul{
     display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    white-space: nowrap;
+
+    li{
+      display: inline-block;
+    }
+
+    a {
+      display: flex;
+      padding: 8px;
+      gap: 8px;
+
+      span {
+        margin-right: 0.25em;
+      }
+    }
+
   }
+
+
+  /* ul[aria-hidden="false"]{
+    display: block;
+  } */
 }
