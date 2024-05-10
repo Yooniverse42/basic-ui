@@ -1,0 +1,41 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 50px;
+}
+
+.menu {
+  background: linear-gradient(to bottom, var(--orange-100), var(--orange-200), var(--orange-100));
+  box-shadow: 0 -5Px 0 0 #121212;
+  color: #000;
+  display: flow-root;
+  padding-left: 225px;
+
+  > li {
+    float: left;
+    /* 클릭할 수 없도록 버튼에 보더를 주는 것이 아닌 li에 줘야함 */
+    border-left: 2px solid #fff;
+  }
+
+  button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 24px;
+    height: 60px;
+    /* button은 line-heigh가 필요없지만(?) 만약 span이라면 해줘야함..왜..필요없냐? */
+    line-height: 60px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    /* x축 y축 blur 색상 - text새도우는 스프레드 속성 없음, 깊은 섀도우를 주고 싶으면 섀도우를 여러개 만들면 됨. 그리고 블러를 이용하여 자연스럽게 퍼지는 느낌 주기 */
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
+    /* 윤곽처럼 보이게 하고 싶을 땐 -1px 적용 */
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
+
+  ul {
+    display: none;
+  }
+}
