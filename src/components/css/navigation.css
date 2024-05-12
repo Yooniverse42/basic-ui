@@ -6,12 +6,26 @@ body {
   margin: 50px;
 }
 
+/* 웹카페 이미지 */
+.header{
+  position: relative;
+}
+
+.logo{
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+/* 내비게이션 메뉴바 */
+
 .menu {
   background: linear-gradient(to bottom, var(--orange-100), var(--orange-200), var(--orange-100));
-  box-shadow: 0 -5Px 0 0 #121212;
+  box-shadow: 0 -5px 0 0 #121212;
   color: #000;
   display: flow-root;
   padding-left: 225px;
+  padding-inline-start: 225px;
 
   > li {
     float: left;
@@ -20,11 +34,11 @@ body {
     position: relative;
   }
 
-  > li:nth-child(-n+3) ul {
+  > li:nth-child(-n + 3) ul{
     left: 0;
   }
 
-  > li:nth-child(n+4) ul {
+  > li:nth-child(n + 4) ul{
     right: 0;
   }
 
@@ -40,13 +54,10 @@ body {
       }
     }
 
-    /* span {
-      border-bottom: 2px solid black;
-    } */
-
     ul {
-      display: block;
+      display: flex;
     }
+
   }
 
   
@@ -61,7 +72,7 @@ body {
     border: 0;
     color: #fff;
     /* x축 y축 blur 색상 - text새도우는 스프레드 속성 없음, 깊은 섀도우를 주고 싶으면 섀도우를 여러개 만들면 됨. 그리고 블러를 이용하여 자연스럽게 퍼지는 느낌 주기 */
-    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000;
+    /* text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000; */
     /* 윤곽처럼 보이게 하고 싶을 땐 -1px 적용 */
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
     
@@ -78,23 +89,19 @@ body {
     display: none;
     position: absolute;
     top: 65px;
-    left: 0;
-    white-space: nowrap;
 
     li{
       display: inline-block;
+      white-space: nowrap;
+      margin-right: 4px;
+      margin-inline-end: 4px;
     }
 
-    a {
+    a{
       display: flex;
       padding: 8px;
       gap: 8px;
-
-      span {
-        margin-right: 0.25em;
-      }
     }
-
   }
 
 
